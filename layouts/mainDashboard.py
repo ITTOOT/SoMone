@@ -5,6 +5,8 @@
 from dash import dcc, html
 from data.preprocess import df
 
+
+
 ################################# DASHBOARD #################################
 # Dashboard components
 # options: the options the geography has, value: staring option
@@ -13,12 +15,12 @@ geo_dropdown = dcc.Dropdown(id='geo_dropdown',
                             options=df['geography'].unique(),
                             value='New York')
 
-tabMenuBar = dcc.Tabs(id="tabsMenuBar", value='tab-1', children=[
-    dcc.Tab(label='Tab 1', value='tab-1', style='tab_style', selected_style='tab_selected_style'),
-    dcc.Tab(label='Tab 2', value='tab-2', style='tab_style', selected_style='tab_selected_style'),
-    dcc.Tab(label='Tab 3', value='tab-3', style='tab_style', selected_style='tab_selected_style'),
-    dcc.Tab(label='Tab 4', value='tab-4', style='tab_style', selected_style='tab_selected_style'),
-], style='tabs_styles')
+tabMenuBar = dcc.Tabs(id="tabsMenuBar", value='tab-1', className="os-tab-container", children=[
+                dcc.Tab(label='Tab 1', value='tab-1', className='os-tab', selected_style=tab_selected_style),
+                dcc.Tab(label='Tab 2', value='tab-2', className='os-tab'),
+                dcc.Tab(label='Tab 3', value='tab-3', className='os-tab'),
+                dcc.Tab(label='Tab 4', value='tab-4', className='os-tab'),
+            ])
 
 # Dashboard
 layout = html.Div(children=[
@@ -39,3 +41,4 @@ layout = html.Div(children=[
         dcc.Graph(id='price-graph_3'),
     ], style={'display': 'inline-block', 'width': '49%'}),
 ])
+

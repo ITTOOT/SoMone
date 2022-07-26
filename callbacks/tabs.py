@@ -1,10 +1,9 @@
 #
 from dash import html, Output, Input
 
-
 def tab_callbacks(app):
     # Render tab bar
-    @app.callback(  # Output/Input properties of the Dash components
+    @app.callback(
         Output(component_id='tabsMenuBarContent', component_property='children'),
         Input(component_id='tabsMenuBar', component_property='value'))
     # Callback definitions
@@ -25,3 +24,4 @@ def tab_callbacks(app):
             return html.Div([
                 html.H3('Tab content 4')
             ])
+

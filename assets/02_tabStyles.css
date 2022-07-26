@@ -1,0 +1,33 @@
+.os-tab-parent {
+  width: auto;
+  height: 44px;
+}
+
+.os-tab-container {
+  width: auto;
+  height: 44px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.os-tab {
+  width: auto;
+  background-color: #abc432 !important;
+  color: #323232;
+  vertical-align: middle !important;
+  padding: 8px 10px 2px 10px !important;
+  font-weight: bolder;
+}
+
+.tab-selected{
+  background-color: #323232 !important;
+  border-top-color: #abc432 !important;
+  color: #abc432 !important;
+  padding: 8px 10px 2px 10px !important;
+  font-palette: dark;
+  font-family: "Bauhaus 93";
+}
+
+.tab:hover{
+  color: white;
+}

@@ -26,7 +26,7 @@ def plotly_callbacks(app):
     #
     #
     # Update scatter
-    @app.callback(  # Output/Input properties of the Dash components
+    @app.callback(
         Output(component_id='price-graph_2', component_property='figure'),
         Input(component_id='geo_dropdown', component_property='value')
     )
