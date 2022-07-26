@@ -16,7 +16,7 @@ Running on Dash default URL: http://127.0.0.1:8050/
 # from dash import Dash, html, dcc, Input, Output
 from dash import Dash
 from callbacks.plotlyCharts import plotly_callbacks
-from callbacks.tabs import tab_callbacks
+from callbacks.navigation import tab_callbacks
 from layouts.mainDashboard import layout
 
 # Dash object

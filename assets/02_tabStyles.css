@@ -1,21 +1,22 @@
 .os-tab-parent {
   width: auto;
-  height: 44px;
+  height: auto;
 }
 
 .os-tab-container {
   width: auto;
-  height: 44px;
+  height: auto;
   display: inline-block;
   margin-top: 2px;
 }
 
 .os-tab {
   width: auto;
-  background-color: #abc432 !important;
+  height: auto;
+  background-color: blueviolet !important;
   color: #323232;
   vertical-align: middle !important;
-  padding: 8px 10px 2px 10px !important;
+  padding: 8px 4px 2px 4px !important;
   font-weight: bolder;
 }
 
