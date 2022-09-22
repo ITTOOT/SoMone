@@ -1,6 +1,6 @@
 #
 from dash import html, Output, Input
-from tabs.tab_1 import tab_1
+from tabs import tab_1, tab_2, tab_3, tab_4
 
 
 def tab_callbacks(app):
@@ -11,17 +11,12 @@ def tab_callbacks(app):
     # Callback definitions
     def render_content(tab):
         if tab == 'tab-1':
-            return tab_1()
+            return tab_1.tab_1()
         elif tab == 'tab-2':
-            return html.Div([
-                html.H3('Tab content 2')
-            ])
+            return tab_2.tab_2()
         elif tab == 'tab-3':
-            return html.Div([
-                html.H3('Tab content 3')
-            ])
+             return tab_3.tab_3()
         elif tab == 'tab-4':
-            return html.Div([
-                html.H3('Tab content 4')
-            ])
+             return tab_4.tab_4()
+
 

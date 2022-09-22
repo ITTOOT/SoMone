@@ -3,24 +3,30 @@
 # Dash
 # With html, Dash Core Components and Input & Output for callback functions
 from dash import dcc, html
-from data.preprocess import df
+from data.preprocessor import df1
 
 # CSS
 selected_style = {
-'borderTop': '1px solid #d6d6d6',
-'borderBottom': '1px solid #d6d6d6',
-'backgroundColor': '#119DFF',
-'color': 'white',
-'padding': '6px'
+    'borderTop': '1px solid #d6d6d6',
+    'borderBottom': '1px solid #d6d6d6',
+    'backgroundColor': '#119DFF',
+    'color': 'white',
+    'padding': '6px'
 }
 
 ################################# DASHBOARD #################################
 # Dashboard components
 # options: the options the geography has, value: staring option
 
+
 geo_dropdown = dcc.Dropdown(id='geo_dropdown',
-                            options=df['geography'].unique(),
+                            options=df1['geography'].unique(),
                             value='New York')
+
+ml_dropdown_1 = dcc.Dropdown(id='ml_dropdown',
+                            options=["Regression", "Decision Tree", "k-NN"],
+                            value='Decision Tree',
+                            clearable=False)
 
 tabMenuBar = dcc.Tabs(id="tabsMenuBar", value='tab-1', className="os-tab-container", children=[
                 dcc.Tab(label='Tab 1', value='tab-1', className='os-tab', selected_style=selected_style),
